@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vue Basics</title>
+    <link rel="stylesheet" href="theme.css"/>
+</head>
+<body>
+
+<div class="container" id="app">
+    <div class="card">
+        <h1>{{ title }}</h1>
+        <div class="form-control">
+            <label for="inp">
+                Поле ввода:
+                <input id="inp"
+                       type="text"
+                       style="margin-top: 10px;"
+                       v-bind:value="inputValue"
+                       v-bind:placeholder="placeholderBind"
+                       v-on:input="inputChangeHandler"
+                />
+            </label>
+        </div>
+        <button class="btn">Добавить</button>
+        <hr/>
+        <ul class="list">
+            <li class="list-item">
+                {{ notes[0] }}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
